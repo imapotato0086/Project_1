@@ -1,5 +1,6 @@
 #include <iostream>
 #include "PGM.h"
+#include "ImageProcessing.h"
 using namespace std;
 
 int main()
@@ -9,8 +10,8 @@ int main()
     //string fileName = "lena.pgm";
 
     // Clion paths if cloned from repo
-    string fileName = "..\\test_images\\lena.pgm";
-    string outputName = "..\\processed_images\\lena_copy.pgm";
+    string fileName = "..\\test_images\\balloons.pgm";
+    string outputName = "..\\processed_images\\balloons_copy_horzflip.pgm";
 
     //Open File set information
     if( openPGM(fileName) )
@@ -29,6 +30,10 @@ int main()
         
         // Get the data
         getPGMData(original);	
+
+        //flipVertical(original, height, width);
+        flipHorizontal(original, height, width);
+
 
         // Write back out the same image
         if( !writePGM(outputName, original) ){
