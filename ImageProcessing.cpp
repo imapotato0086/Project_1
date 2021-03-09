@@ -4,7 +4,7 @@
 #include <iostream>
 #include "ImageProcessing.h"
 //#include "PGM.h"
-// COMMIT TEST
+
 
 void copyImage(int** original, int** copy, const int height, const int width)
 {
